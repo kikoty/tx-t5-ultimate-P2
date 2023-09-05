@@ -110,3 +110,4 @@ async def to_code(config):
     await uart.register_uart_device(var, config)
 
     await register_tx_ultimate_touch(var, config)
+
