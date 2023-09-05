@@ -132,11 +132,11 @@ improv_serial:
 captive_portal:
 
 external_components:
-#  - source: /config/esphome/my_components
-  - source:
-      type: git
-      url: https://github.com/kikoty/tx-t5-ultimate
-      ref: main
+  - source: /config/.esphome/tx-ultimate_touch
+ # - source:
+ #     type: git
+#      url: https://github.com/kikoty/tx-t5-ultimate
+  #    ref: main
     components: [tx_ultimate_touch]
     
 
