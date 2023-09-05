@@ -5,7 +5,7 @@
 #
 substitutions:
   name: "shys-tx-ultimate"
-  friendly_name: "tx-ultimate"
+  friendly_name: tx-ultimate
 
   relay_count: "1"
 
