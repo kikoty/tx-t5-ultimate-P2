@@ -1,6 +1,8 @@
 #Credits
 #https://github.com/SmartHome-yourself/sonoff-tx-ultimate-for-esphome/tree/main/components/tx_ultimate_touch
-
+#
+#
+#
 substitutions:
   name: "shys-tx-ultimate"
   friendly_name: "tx-ultimate"
@@ -132,12 +134,9 @@ improv_serial:
 captive_portal:
 
 external_components:
-  - source: /config/.esphome/tx-ultimate_touch
- # - source:
- #     type: git
-#      url: https://github.com/kikoty/tx-t5-ultimate
-  #    ref: main
-    components: [tx_ultimate_touch]
+  - source:
+      type: local
+      path: my_components
     
 
 
