@@ -104,19 +104,22 @@ esphome:
 
 esp32:
   board: esp32dev
+  compression:
+    bin: yes
+    arguments: -9
   framework:
     type: arduino
 
-logger:
+#logger:
 #  hardware_uart: UART2
-  level: DEBUG
-  logs:
-    binary_sensor: INFO
-    light: INFO
-    script: INFO
-    switch: INFO
-    tx_ultimate_touch: INFO
-    uart_debug: INFO
+#  level: DEBUG
+ # logs:
+ #   binary_sensor: INFO
+  #  light: INFO
+   # script: INFO
+   # switch: INFO
+   # tx_ultimate_touch: INFO
+   # uart_debug: INFO
 
 dashboard_import:
   package_import_url: github://kikoty/tx-t5-ultimate/tx_ultimate.yaml@main
@@ -130,7 +133,7 @@ wifi:
   ap:
     password: "12345678"
     
-improv_serial:
+#improv_serial:
 
 captive_portal:
 
