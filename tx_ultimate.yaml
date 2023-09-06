@@ -103,9 +103,6 @@ esphome:
 
 esp32:
   board: esp32dev
-  compression:
-    bin: yes
-    arguments: -9
   framework:
     type: arduino
 
