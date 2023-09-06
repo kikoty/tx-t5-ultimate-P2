@@ -60,9 +60,9 @@ substitutions:
   uart_tx_pin: GPIO19
   uart_rx_pin: GPIO22
 
-#  audio_lrclk_pin: GPIO4
-#  audio_bclk_pin: GPIO2
-#  audio_sdata_pin: GPIO15
+  audio_lrclk_pin: GPIO4
+  audio_bclk_pin: GPIO2
+  audio_sdata_pin: GPIO15
 
   touchpanel_power_pin: GPIO5
 
@@ -361,15 +361,15 @@ light:
     name: "NeoPixel Light"
     id: leds
     default_transition_length: 0s
-  #  effects:
-  #    - addressable_rainbow:
-  #        name: "Rainbow"
-  #        speed: 30
-   #       width: 8
-  #    - pulse:
-   #       name: "Pulse"
-   #       transition_length: 1.4s
-    #      update_interval: 1s
+    effects:
+      - addressable_rainbow:
+          name: "Rainbow"
+          speed: 30
+          width: 8
+      - pulse:
+          name: "Pulse"
+          transition_length: 1.4s
+          update_interval: 1s
 
     on_turn_off:
       then:
@@ -429,20 +429,20 @@ light:
     #      speed: 10
      #     width: 20
 #
-#media_player:
- # - platform: i2s_audio
- #   id: media_out
-#    name: ${friendly_name} Player
- #   dac_type: external
- #   i2s_dout_pin: ${audio_sdata_pin}
-#    i2s_audio_id: audio_i2s
- #   i2s_comm_fmt: lsb
- #   mode: mono
+media_player:
+  - platform: i2s_audio
+    id: media_out
+    name: ${friendly_name} Player
+    dac_type: external
+    i2s_dout_pin: ${audio_sdata_pin}
+    i2s_audio_id: audio_i2s
+    i2s_comm_fmt: lsb
+    mode: mono
 
-#i2s_audio:
- # id: audio_i2s
- # i2s_lrclk_pin: ${audio_lrclk_pin}
- # i2s_bclk_pin: ${audio_bclk_pin}
+i2s_audio:
+  id: audio_i2s
+  i2s_lrclk_pin: ${audio_lrclk_pin}
+  i2s_bclk_pin: ${audio_bclk_pin}
 
 uart:
   tx_pin: ${uart_tx_pin}
