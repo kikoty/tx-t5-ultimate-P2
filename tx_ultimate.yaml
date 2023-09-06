@@ -70,7 +70,7 @@ substitutions:
 esphome:
   name: ${name}
   friendly_name: ${friendly_name}
-  compression: True
+  compression: true
   project:
     name: smarthomeyourself.tx_ultimate
     version: "1.0"
