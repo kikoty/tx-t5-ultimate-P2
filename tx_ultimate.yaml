@@ -106,16 +106,16 @@ esp32:
   framework:
     type: arduino
 
-#logger:
-#  hardware_uart: UART2
-#  level: DEBUG
- # logs:
- #   binary_sensor: INFO
-  #  light: INFO
-   # script: INFO
-   # switch: INFO
-   # tx_ultimate_touch: INFO
-   # uart_debug: INFO
+logger:
+  hardware_uart: UART2
+  level: DEBUG
+  logs:
+    binary_sensor: INFO
+    light: INFO
+    script: INFO
+    switch: INFO
+    tx_ultimate_touch: INFO
+    uart_debug: INFO
 
 dashboard_import:
   package_import_url: github://kikoty/tx-t5-ultimate/tx_ultimate.yaml@main
@@ -126,12 +126,12 @@ api:
 ota:
 
 wifi:
- # ap:
- #   password: "12345678"
+  ap:
+    password: "12345678"
     
-#improv_serial:
+improv_serial:
 
-#captive_portal:
+captive_portal:
 
 external_components:
 #  - source: /config/esphome/my_components
