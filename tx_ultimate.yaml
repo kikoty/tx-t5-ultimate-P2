@@ -126,12 +126,12 @@ api:
 ota:
 
 wifi:
-  ap:
-    password: "12345678"
+ # ap:
+ #   password: "12345678"
     
 #improv_serial:
 
-captive_portal:
+#captive_portal:
 
 external_components:
 #  - source: /config/esphome/my_components
