@@ -426,12 +426,8 @@ light:
           colors:
             - red: 0%
               green: 0%
-              blue: 100%
-              num_leds: 1
-            - red: 0%
-              green: 0%
               blue: 0%
-              num_leds: 1
+              num_leds: 5
           add_led_interval: 10ms
           reverse: false
           - light.addressable_set:
