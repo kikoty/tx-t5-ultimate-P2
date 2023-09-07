@@ -406,8 +406,8 @@ light:
       - addressable_random_twinkle:
       - addressable_random_twinkle:
           name: Random Twinkle Effect With Custom Values
-          twinkle_probability: 5%
-          progress_interval: 32ms
+          twinkle_probability: 100%
+          progress_interval: 50ms
       - addressable_fireworks:
       - addressable_fireworks:
           name: Fireworks Effect With Custom Values
