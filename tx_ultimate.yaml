@@ -386,9 +386,9 @@ light:
             }
       - addressable_lambda:
           name: "My Custom Effect2"
-          update_interval: 25ms
+          update_interval: 40ms
           lambda: |-
-            static int state[] = {0, 5, 9, 14, 20};
+            static int state[] = {rand() % 27, rand() % 27, rand() % 27, rand() % 27, rand() % 27};
             static const int numStates = sizeof(state) / sizeof(state[0]);
             auto red = Color(255, 0, 0);
             auto green = Color(0, 255, 0);
