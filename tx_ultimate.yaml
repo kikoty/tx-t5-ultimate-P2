@@ -387,7 +387,7 @@ light:
             }
       - addressable_lambda:
           name: "My Custom Effect2"
-          update_interval: 30ms
+          update_interval: 25ms
           lambda: |-
             // it.size() - Number of LEDs
             // it[num] - Access the LED at index num.
@@ -396,6 +396,10 @@ light:
             // Get the color at index num (Color instance)
             // it[num].get();
             static int state = 0;
+            static int state2 = 5;
+            static int state3 = 9;
+            static int state4 = 14;
+            static int state4 = 20;
             auto red = Color(255, 0, 0);
             auto green = Color(0, 255, 0);
             auto blue = Color(0, 0, 255);
@@ -423,9 +427,94 @@ light:
                }
                 
             }
-          
- 
-           
+            if (state == 0 ) {
+              it.all() = blue;
+              // optionally do a return so nothing happens until the next update_interval
+               state = state + 1;
+              return;
+            }
+            else
+            {
+               if (state == 27) 
+               {
+                 state = 0;
+                 return;
+               }
+               else
+               {
+                  it[state] = white;
+                  it[state-1] = blue;
+                  state = state + 1;
+                  return;
+               }
+                
+            }
+           if (state3 == 0 ) {
+              it.all() = blue;
+              // optionally do a return so nothing happens until the next update_interval
+               state3 = state3 + 1;
+              return;
+            }
+            else
+            {
+               if (state3 == 27) 
+               {
+                 state3 = 0;
+                 return;
+               }
+               else
+               {
+                  it[state3] = white;
+                  it[state3-1] = blue;
+                  state3 = state3 + 1;
+                  return;
+               }
+                
+            }
+           if (state4 == 0 ) {
+              it.all() = blue;
+              // optionally do a return so nothing happens until the next update_interval
+               state4 = state4 + 1;
+              return;
+            }
+            else
+            {
+               if (state4 == 27) 
+               {
+                 state4 = 0;
+                 return;
+               }
+               else
+               {
+                  it[state4] = white;
+                  it[state4-1] = blue;
+                  state4 = state4 + 1;
+                  return;
+               }
+                
+            }
+            if (state5 == 0 ) {
+              it.all() = blue;
+              // optionally do a return so nothing happens until the next update_interval
+               state5 = state5 + 1;
+              return;
+            }
+            else
+            {
+               if (state5 == 27) 
+               {
+                 state5 = 0;
+                 return;
+               }
+               else
+               {
+                  it[state5] = white;
+                  it[state5-1] = blue;
+                  state5 = state5 + 1;
+                  return;
+               }
+                
+            }
       - addressable_rainbow:
           name: "Rainbow"
           speed: 30
