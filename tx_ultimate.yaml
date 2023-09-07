@@ -387,7 +387,7 @@ light:
             }
       - addressable_lambda:
           name: "My Custom Effect2"
-          update_interval: 5000ms
+          update_interval: 30ms
           lambda: |-
             // it.size() - Number of LEDs
             // it[num] - Access the LED at index num.
@@ -395,22 +395,36 @@ light:
             // it[num] = Color(r, g, b);
             // Get the color at index num (Color instance)
             // it[num].get();
+            static int state = 0;
             auto red = Color(255, 0, 0);
             auto green = Color(0, 255, 0);
             auto blue = Color(0, 0, 255);
             auto white = Color(255, 255, 255);
             // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
-            it.range(0, 27) = blue;
-            it.all().fade_to_black(100);
-            delay(2500);
-            for (int i = it.size() - 1; i > 0; i--) {
-              delay(50);
-              it[i] = white;
-              if (i + 1 <=  it.size() - 1)
-              {
-                it[i-1] = blue;
-              }
+            if (state == 0 ) {
+              progress = 0;
+              it.all() = blue;
+              // optionally do a return so nothing happens until the next update_interval
+               state = state + 1;
+              return;
             }
+            else
+            {
+               if (state == 27) 
+               {
+                 state = 0;
+                 return;
+               }
+               else
+               {
+                  it[state] = white;
+                  it[state-1] = blue;
+                  state = state + 1;
+                  return;
+               }
+                
+            }
+          
  
            
       - addressable_rainbow:
