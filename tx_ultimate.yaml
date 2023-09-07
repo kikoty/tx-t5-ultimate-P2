@@ -404,9 +404,11 @@ light:
             it.all().fade_to_black(100);
             for (int i = it.size() - 1; i > 0; i--) {
               delay(20);
-              it[i] = white
-              it[i-1] = blue
-              it[i+1] = blue
+              it[i] = white;
+              if (i + 1 <=  it.size() - 1)
+              {
+                it[i-1] = blue;
+              }
             }
  
            
