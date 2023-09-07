@@ -382,7 +382,7 @@ light:
               // optionally do a return so nothing happens until the next update_interval
               return;
             }
-       - addressable_lambda:
+      - addressable_lambda:
           name: "My Custom Effect2"
           update_interval: 160ms
           lambda: |-
