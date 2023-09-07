@@ -390,7 +390,10 @@ light:
           lambda: |-
            // Inicializa la semilla de rand() para obtener valores aleatorios
             srand(time(NULL));
-            
+            auto red = Color(255, 0, 0);
+            auto green = Color(0, 255, 0);
+            auto blue = Color(0, 0, 255);
+            auto white = Color(255, 255, 255);
             // Define un vector para almacenar los estados
             std::vector<int> state;
             
