@@ -402,7 +402,6 @@ light:
             auto white = Color(255, 255, 255);
             // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
             if (state == 0 ) {
-              progress = 0;
               it.all() = blue;
               // optionally do a return so nothing happens until the next update_interval
                state = state + 1;
