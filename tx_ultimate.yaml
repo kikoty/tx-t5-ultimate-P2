@@ -420,6 +420,10 @@ light:
           name: Flicker Effect With Custom Values2
           update_interval: 16ms
           intensity: 5%
+      - custom_led_effect:
+          name: "White LED Chase"
+          transition_length: 100ms
+          update_interval: 20ms
     on_turn_off:
       then:
         - script.execute: refresh_led_default
