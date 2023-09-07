@@ -417,7 +417,7 @@ light:
           fade_out_rate: 120
       - addressable_flicker:
       - addressable_flicker:
-          name: Flicker Effect With Custom Values
+          name: Flicker Effect With Custom Values2
           update_interval: 16ms
           intensity: 5%
     on_turn_off:
