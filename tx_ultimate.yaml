@@ -384,7 +384,7 @@ light:
             }
       - addressable_lambda:
           name: "My Custom Effect2"
-          update_interval: 16ms
+          update_interval: 160ms
           lambda: |-
             // it.size() - Number of LEDs
             // it[num] - Access the LED at index num.
@@ -392,16 +392,17 @@ light:
             // it[num] = Color(r, g, b);
             // Get the color at index num (Color instance)
             // it[num].get();
-  
+            it.range(0, 27) = Color::BLUE;
+             it.all().fade_to_blue(50);
             // Example: Simple color wipe
             for (int i = it.size() - 1; i > 0; i--) {
               it[i] = it[i - 1].get();
             }
-            it[0] = Color::random_color();
+            it[0] = Color::WHITE();
   
             // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
-            it.range(0, 50) = Color::BLACK;
-            it.all().fade_to_black(10);
+            //it.range(0, 50) = Color::BLACK;
+           // it.all().fade_to_black(10);
       - addressable_rainbow:
           name: "Rainbow"
           speed: 30
