@@ -372,7 +372,7 @@ light:
           update_interval: 1s
       - strobe:
       - strobe:
-          name: Strobe Effect With Custom Values
+          name: "Strobe Effect With Custom Values"
           colors:
             - state: true
               brightness: 100%
@@ -388,38 +388,38 @@ light:
               green: 100%
               blue: 0%
               duration: 500ms
-            - flicker:
-            - flicker:
-                name: Flicker Effect With Custom Values
-                alpha: 95%
-                intensity: 1.5%
-            - addressable_scan:
-            - addressable_scan:
-                name: Scan Effect With Custom Values
-                move_interval: 100ms
-                scan_width: 1
-            - addressable_twinkle:
-            - addressable_twinkle:
-                name: Twinkle Effect With Custom Values
-                twinkle_probability: 5%
-                progress_interval: 4ms
-            - addressable_random_twinkle:
-            - addressable_random_twinkle:
-                name: Random Twinkle Effect With Custom Values
-                twinkle_probability: 5%
-                progress_interval: 32ms
-            - addressable_fireworks:
-            - addressable_fireworks:
-                name: Fireworks Effect With Custom Values
-                update_interval: 32ms
-                spark_probability: 10%
-                use_random_color: false
-                fade_out_rate: 120
-            - addressable_flicker:
-            - addressable_flicker:
-                name: Flicker Effect With Custom Values
-                update_interval: 16ms
-                intensity: 5%
+      - flicker:
+      - flicker:
+          name: Flicker Effect With Custom Values
+          alpha: 95%
+          intensity: 1.5%
+      - addressable_scan:
+      - addressable_scan:
+          name: Scan Effect With Custom Values
+          move_interval: 100ms
+          scan_width: 1
+      - addressable_twinkle:
+      - addressable_twinkle:
+          name: Twinkle Effect With Custom Values
+          twinkle_probability: 5%
+          progress_interval: 4ms
+      - addressable_random_twinkle:
+      - addressable_random_twinkle:
+          name: Random Twinkle Effect With Custom Values
+          twinkle_probability: 5%
+          progress_interval: 32ms
+      - addressable_fireworks:
+      - addressable_fireworks:
+          name: Fireworks Effect With Custom Values
+          update_interval: 32ms
+          spark_probability: 10%
+          use_random_color: false
+          fade_out_rate: 120
+      - addressable_flicker:
+      - addressable_flicker:
+          name: Flicker Effect With Custom Values
+          update_interval: 16ms
+          intensity: 5%
     on_turn_off:
       then:
         - script.execute: refresh_led_default
