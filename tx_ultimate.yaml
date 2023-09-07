@@ -389,7 +389,7 @@ light:
           update_interval: 25ms
           lambda: |-
            // Inicializa la semilla de rand() para obtener valores aleatorios
-            srand(time(NULL));
+           // srand(time(NULL));
             auto red = Color(255, 0, 0);
             auto green = Color(0, 255, 0);
             auto blue = Color(0, 0, 255);
