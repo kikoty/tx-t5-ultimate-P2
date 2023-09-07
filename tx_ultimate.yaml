@@ -14,7 +14,7 @@ substitutions:
   toggle_relay_3_on_touch: "true"
 
   vibra_time: 150ms
-  button_on_time: 500ms
+  button_on_time: 50ms
 
   button_brightness: "0.7"
   button_color: "{0,0,100}"
