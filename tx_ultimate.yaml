@@ -12,7 +12,6 @@ substitutions:
   toggle_relay_1_on_touch: "true"
   toggle_relay_2_on_touch: "true"
   toggle_relay_3_on_touch: "true"
-
   vibra_time: 150ms
   button_on_time: 500ms
 
@@ -401,16 +400,13 @@ light:
                 it.all() = blue;
                 // Opcionalmente puedes hacer un retorno para que no suceda nada hasta el próximo update_interval
                 state[i]++;
-                return;
               } else {
                 if (state[i] == 27) {
                   state[i] = 0;
-                  return;
                 } else {
                   it[state[i]] = white;
                   it[state[i] - 1] = blue;
                   state[i]++;
-                  return;
                 }
               }
             }
