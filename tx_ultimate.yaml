@@ -388,28 +388,15 @@ light:
           name: "My Custom Effect2"
           update_interval: 25ms
           lambda: |-
-           // Inicializa la semilla de rand() para obtener valores aleatorios
-           // srand(time(NULL));
+           static int state[] = {0, 3, 5, 10, 12};
+            static const int numStates = sizeof(state) / sizeof(state[0]);
             auto red = Color(255, 0, 0);
             auto green = Color(0, 255, 0);
             auto blue = Color(0, 0, 255);
             auto white = Color(255, 255, 255);
-            // Define un vector para almacenar los estados
-            std::vector<int> state;
             
-            // Genera un número aleatorio entre 1 y 5 para determinar la cantidad de elementos en el vector
-            int numStates = rand() % 5 + 1;
-            
-            // Llena el vector con valores aleatorios entre 0 y 27
             for (int i = 0; i < numStates; i++) {
-              state.push_back(rand() % 28);
-            }
-            
-            // ...
-            
-            // El bucle for sigue siendo el mismo, pero ahora usamos numStates como la longitud del vector
-            for (int i = 0; i < numStates; i++) {
-              if (state[i] == 0) {
+              if (state[0] == 0 && i = 0) {
                 it.all() = blue;
                 // Opcionalmente puedes hacer un retorno para que no suceda nada hasta el próximo update_interval
                 state[i]++;
