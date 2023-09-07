@@ -430,7 +430,7 @@ light:
               num_leds: 1
           add_led_interval: 50ms
           reverse: false
-       - addressable_color_wipe:
+      - addressable_color_wipe:
           name: Color Wipe Effect red B to T
           colors:
             - red: 100%
