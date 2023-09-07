@@ -396,8 +396,8 @@ light:
       - addressable_scan:
       - addressable_scan:
           name: Scan Effect With Custom Values
-          move_interval: 100ms
-          scan_width: 1
+          move_interval: 10ms
+          scan_width: 5
       - addressable_twinkle:
       - addressable_twinkle:
           name: Twinkle Effect With Custom Values
