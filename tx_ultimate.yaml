@@ -399,7 +399,7 @@ light:
             static int state2 = 5;
             static int state3 = 9;
             static int state4 = 14;
-            static int state4 = 20;
+            static int state5 = 20;
             auto red = Color(255, 0, 0);
             auto green = Color(0, 255, 0);
             auto blue = Color(0, 0, 255);
@@ -427,24 +427,24 @@ light:
                }
                 
             }
-            if (state == 0 ) {
+            if (state2 == 0 ) {
               it.all() = blue;
               // optionally do a return so nothing happens until the next update_interval
-               state = state + 1;
+               state2 = state2 + 1;
               return;
             }
             else
             {
-               if (state == 27) 
+               if (state2 == 27) 
                {
-                 state = 0;
+                 state2 = 0;
                  return;
                }
                else
                {
-                  it[state] = white;
-                  it[state-1] = blue;
-                  state = state + 1;
+                  it[state2] = white;
+                  it[state2-1] = blue;
+                  state2 = state2 + 1;
                   return;
                }
                 
