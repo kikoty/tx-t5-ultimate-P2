@@ -430,13 +430,6 @@ light:
               num_leds: 5
           add_led_interval: 10ms
           reverse: false
-          - light.addressable_set:
-            id: leds
-            range_from: 0
-            range_to: 27
-            red: 0%
-            green: 0%
-            blue: 100%
     on_turn_off:
       then:
         - script.execute: refresh_led_default
