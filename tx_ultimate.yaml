@@ -387,7 +387,7 @@ light:
             }
       - addressable_lambda:
           name: "My Custom Effect2"
-          update_interval: 1000ms
+          update_interval: 5000ms
           lambda: |-
             // it.size() - Number of LEDs
             // it[num] - Access the LED at index num.
@@ -402,8 +402,9 @@ light:
             // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
             it.range(0, 27) = blue;
             it.all().fade_to_black(100);
+            delay(2500);
             for (int i = it.size() - 1; i > 0; i--) {
-              delay(20);
+              delay(50);
               it[i] = white;
               if (i + 1 <=  it.size() - 1)
               {
