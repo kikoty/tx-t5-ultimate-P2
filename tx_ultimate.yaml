@@ -400,7 +400,7 @@ light:
             it[0] = Color::random_color();
   
             // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
-            it.range(0, 27) = Color::BLUE;
+            it.range(0, 27) = Color::Color(0.000,0.000,1.000,0.000);
             it.all().fade_to_black(100);
       - addressable_rainbow:
           name: "Rainbow"
