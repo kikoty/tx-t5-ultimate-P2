@@ -369,7 +369,10 @@ light:
             // Static variables keep their value even when
             // stopping and starting the effect again
             static uint16_t progress = 0;
-  
+            auto red = Color(255, 0, 0);
+            auto green = Color(0, 255, 0);
+            auto blue = Color(0, 0, 255);
+            auto white = Color(255, 255, 255);
             // normal variables lose their value after each
             // execution - basically after each update_interval
             uint16_t changes = 0;
@@ -378,7 +381,7 @@ light:
             // again you can use the initial_run variables
             if (initial_run) {
               progress = 0;
-              it.all() = Color::BLACK;
+              it.all() = blue;
               // optionally do a return so nothing happens until the next update_interval
               return;
             }
@@ -392,15 +395,18 @@ light:
             // it[num] = Color(r, g, b);
             // Get the color at index num (Color instance)
             // it[num].get();
-  
+            auto red = Color(255, 0, 0);
+            auto green = Color(0, 255, 0);
+            auto blue = Color(0, 0, 255);
+            auto white = Color(255, 255, 255);
             // Example: Simple color wipe
             //for (int i = it.size() - 1; i > 0; i--) {
             //  it[i] = it[i - 1].get();
             //}
-            it[0] = Color::random_color();
+            it[0] = white;
   
             // Bonus: use .range() and .all() to set many LEDs without having to write a loop.
-            it.range(0, 27) = Color::Color(0.000,0.000,1.000,0.000);
+            it.range(0, 27) = blue;
             it.all().fade_to_black(100);
       - addressable_rainbow:
           name: "Rainbow"
