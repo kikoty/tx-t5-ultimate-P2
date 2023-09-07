@@ -383,7 +383,7 @@ light:
               return;
             }
       - addressable_lambda:
-          name: "My Custom Effect"
+          name: "My Custom Effect2"
           update_interval: 16ms
           lambda: |-
             // it.size() - Number of LEDs
