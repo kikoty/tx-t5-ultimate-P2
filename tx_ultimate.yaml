@@ -396,7 +396,7 @@ light:
             auto white = Color(255, 255, 255);
             
             for (int i = 0; i < numStates; i++) {
-              if (state[0] == 0 && i = 0) {
+              if (state[0] == 0 && i == 0) {
                 it.all() = blue;
                 // Opcionalmente puedes hacer un retorno para que no suceda nada hasta el próximo update_interval
                 state[i]++;
