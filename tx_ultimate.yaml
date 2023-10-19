@@ -19,7 +19,7 @@ substitutions:
   button_color: "{0,0,100}"
 
   nightlight: "on"
-  nightlight_brightness: "0.13"
+  nightlight_brightness: "0.2"
   nightlight_color: "{80,70,0}"
 
   latitude: "50.123456°"
