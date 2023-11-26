@@ -760,7 +760,7 @@ script:
                   - switch.turn_on:
                       id: nightlight
                 else:
-                  - switch.turn_off:
+                  - switch.turn_on: # Always ON
                       id: nightlight
 
   - id: refresh_led_default
