@@ -4,8 +4,8 @@
 #
 #
 substitutions:
-  name: "shys-tx-ultimate-P2"
-  friendly_name: tx-ultimate-P2
+  name: "shys-tx-ultimate-Pasillo"
+  friendly_name: tx-ultimate-Pasillo
 
   relay_count: "1"
 
