@@ -15,12 +15,12 @@ substitutions:
   vibra_time: 150ms
   button_on_time: 500ms
 
-  button_brightness: "0.7"
+  button_brightness: "0.9"
   button_color: "{50,50,100}"
 
   nightlight: "on"
-  nightlight_brightness: "0.2"
-  nightlight_color: "{50,50,50}"
+  nightlight_brightness: "0.9"
+  nightlight_color: "{25,50,75}"
 
   latitude: "50.123456°"
   longitude: "5.654321°"
