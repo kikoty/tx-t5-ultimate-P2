@@ -20,7 +20,7 @@ substitutions:
 
   nightlight: "on"
   nightlight_brightness: "0.2"
-  nightlight_color: "{80,70,0}"
+  nightlight_color: "{50,50,50}"
 
   latitude: "50.123456°"
   longitude: "5.654321°"
