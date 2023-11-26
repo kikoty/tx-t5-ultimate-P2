@@ -16,7 +16,7 @@ substitutions:
   button_on_time: 500ms
 
   button_brightness: "0.7"
-  button_color: "{0,0,100}"
+  button_color: "{50,50,100}"
 
   nightlight: "on"
   nightlight_brightness: "0.2"
