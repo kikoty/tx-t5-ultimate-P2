@@ -432,8 +432,8 @@ light:
               duration: 250ms
             - state: true
               brightness: 100%
-              red: 0%
-              green: 100%
+              red: 100%
+              green: 0%
               blue: 0%
               duration: 500ms
       - flicker:
